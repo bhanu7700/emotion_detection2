@@ -57,7 +57,7 @@ def predict(model,wav_filepath):
     test_point=extract_mfcc(wav_filepath)
     test_point=np.reshape(test_point,newshape=(1,40,1))
     predictions=model.predict(test_point)
-    print(emotions[np.argmax(predictions[0])+1])
+    #print(emotions[np.argmax(predictions[0])+1])
     
     return emotions[np.argmax(predictions[0])+1]
 if __name__ == "__main__":
